@@ -26,12 +26,12 @@ const HeroSection = () => {
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" // Using privacy-enhanced link
-                title="Lucro Automático Presentation"
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+                title="Guia Definitivo do Lucro Automático"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="rounded-lg shadow-lg max-w-full"
+                className="rounded-lg shadow-lg max-w-full w-full md:w-auto"
                 loading="lazy"
               ></iframe>
             </div>
