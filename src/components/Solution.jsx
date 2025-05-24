@@ -37,7 +37,8 @@ const Solution = () => {
 
   return (
     <section className="py-16 bg-black relative">
-      <div className="absolute inset-0 bg-[url('/assets/images/solution-bg.webp')] bg-cover bg-center opacity-20"></div>
+      {/* Background image placeholder for /assets/images/solution-bg.webp */}
+      <div className="absolute inset-0 bg-[url('https://placehold.co/1920x1080?text=SolutionBG')] bg-cover bg-center opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">

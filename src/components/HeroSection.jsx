@@ -5,7 +5,8 @@ import CountdownTimer from './CountdownTimer';
 const HeroSection = () => {
   return (
     <section className="pt-28 pb-20 md:pt-40 md:pb-32 relative bg-black">
-      <div className="absolute inset-0 bg-[url('/assets/images/hero-bg.webp')] bg-cover bg-center opacity-30"></div>
+      {/* Background image placeholder for /assets/images/hero-bg.webp */}
+      <div className="absolute inset-0 bg-[url('https://placehold.co/1920x1080?text=HeroBG')] bg-cover bg-center opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
