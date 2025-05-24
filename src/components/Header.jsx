@@ -21,8 +21,9 @@ const Header = ({ scrollPosition }) => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-90 py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
+          {/* Placeholder for /assets/images/logo.webp */}
           <img 
-            src="/assets/images/logo.webp" 
+            src="https://placehold.co/100x100?text=Logo" 
             alt="Lucro Automático Logo" 
             className="h-12 mr-2"
           />

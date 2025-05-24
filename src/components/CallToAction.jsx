@@ -38,7 +38,8 @@ const CallToAction = () => {
 
   return (
     <section id="comprar" className="py-16 bg-black relative">
-      <div className="absolute inset-0 bg-[url('/assets/images/cta-bg.webp')] bg-cover bg-center opacity-20"></div>
+      {/* Background image placeholder for /assets/images/cta-bg.webp */}
+      <div className="absolute inset-0 bg-[url('https://placehold.co/1920x1080?text=CtaBG')] bg-cover bg-center opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -113,15 +114,18 @@ const CallToAction = () => {
             </h3>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <div className="bg-white p-2 rounded flex items-center">
-                <img src="/assets/images/payment-card.webp" alt="Cartão de Crédito" className="h-8" />
+                {/* Placeholder for /assets/images/payment-card.webp */}
+                <img src="https://placehold.co/50x32?text=Card" alt="Cartão de Crédito" className="h-8" />
                 <span className="ml-2 text-sm text-gray-700 font-medium">Até 12x</span>
               </div>
               <div className="bg-white p-2 rounded flex items-center">
-                <img src="/assets/images/payment-pix.webp" alt="Pix" className="h-8" />
+                {/* Placeholder for /assets/images/payment-pix.webp */}
+                <img src="https://placehold.co/50x32?text=Pix" alt="Pix" className="h-8" />
                 <span className="ml-2 text-sm text-gray-700 font-medium">10% OFF</span>
               </div>
               <div className="bg-white p-2 rounded flex items-center">
-                <img src="/assets/images/payment-boleto.webp" alt="Boleto" className="h-8" />
+                {/* Placeholder for /assets/images/payment-boleto.webp */}
+                <img src="https://placehold.co/50x32?text=Boleto" alt="Boleto" className="h-8" />
                 <span className="ml-2 text-sm text-gray-700 font-medium">5% OFF</span>
               </div>
             </div>

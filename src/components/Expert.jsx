@@ -10,8 +10,9 @@ const Expert = () => {
             <div className="md:w-1/3 mb-8 md:mb-0 flex justify-center">
               <div className="relative">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-green-500">
+                  {/* Placeholder for /assets/images/expert.webp */}
                   <img
-                    src="/assets/images/expert.webp"
+                    src="https://placehold.co/256x256?text=Expert"
                     alt="Ricardo Mendonça - Especialista em Renda Passiva"
                     className="w-full h-full object-cover"
                   />
