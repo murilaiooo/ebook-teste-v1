@@ -25,9 +25,10 @@ const Header = ({ scrollPosition }) => {
           <img 
             src="https://placehold.co/100x100?text=Logo" 
             alt="Lucro Automático Logo" 
-            className="h-12 mr-2"
+            className="h-10 md:h-12 mr-2" // Responsive: Smaller logo on mobile
           />
-          <span className="text-2xl font-bold text-green-500">Lucro Automático</span>
+          {/* Responsive: Smaller text on mobile, larger on md+ */}
+          <span className="text-xl sm:text-2xl font-bold text-green-500">Lucro Automático</span>
         </div>
         
         <div className="hidden md:flex items-center space-x-6">
@@ -62,8 +63,9 @@ const Header = ({ scrollPosition }) => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 md:hidden">
-          <div className="flex justify-end p-4">
+        <div className="fixed inset-0 bg-black bg-opacity-95 z-[60] md:hidden"> {/* Ensure mobile menu is above header */}
+          {/* Responsive: Increased padding for close button visibility */}
+          <div className="flex justify-end p-5"> 
             <button 
               onClick={() => setIsMenuOpen(false)}
               className="text-white"
@@ -76,14 +78,16 @@ const Header = ({ scrollPosition }) => {
           <div className="flex flex-col items-center justify-center h-full">
             <nav className="text-center">
               <ul className="space-y-8">
-                <li><a href="#beneficios" onClick={() => setIsMenuOpen(false)} className="text-2xl hover:text-green-500 transition-colors">Benefícios</a></li>
-                <li><a href="#depoimentos" onClick={() => setIsMenuOpen(false)} className="text-2xl hover:text-green-500 transition-colors">Depoimentos</a></li>
-                <li><a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-2xl hover:text-green-500 transition-colors">FAQ</a></li>
-                <li className="mt-12">
+                {/* Responsive: Slightly smaller text for mobile menu items */}
+                <li><a href="#beneficios" onClick={() => setIsMenuOpen(false)} className="text-xl sm:text-2xl hover:text-green-500 transition-colors">Benefícios</a></li>
+                <li><a href="#depoimentos" onClick={() => setIsMenuOpen(false)} className="text-xl sm:text-2xl hover:text-green-500 transition-colors">Depoimentos</a></li>
+                <li><a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-xl sm:text-2xl hover:text-green-500 transition-colors">FAQ</a></li>
+                <li className="mt-10 sm:mt-12">
                   <a 
                     href="#comprar" 
                     onClick={() => setIsMenuOpen(false)}
-                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors text-xl"
+                    // Responsive: Adjusted padding and text size for mobile CTA
+                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 sm:py-3 sm:px-8 rounded-full transition-colors text-lg sm:text-xl"
                   >
                     Comprar Agora
                   </a>

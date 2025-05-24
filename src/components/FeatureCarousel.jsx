@@ -71,25 +71,33 @@ const FeatureCarousel = () => {
 
   return (
     <div className="relative bg-gray-800 rounded-lg overflow-hidden">
-      <div className="p-6">
+      {/* Responsive: Main content padding adjusted */}
+      <div className="p-4 sm:p-6">
         <div className={`transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+          {/* Layout already flex-col md:flex-row items-center, which is good */}
           <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-2/5 mb-6 md:mb-0">
+            {/* Responsive: Image container margin adjusted */}
+            <div className="w-full md:w-2/5 mb-4 sm:mb-6 md:mb-0">
               <div className="rounded-lg overflow-hidden">
+                {/* Responsive: Image height adjusted */}
                 <img 
                   src={features[currentIndex].image}
                   alt={features[currentIndex].title}
-                  className="w-full h-60 object-cover"
+                  className="w-full h-48 sm:h-52 md:h-60 object-cover" // Adjusted height for mobile
                 />
               </div>
             </div>
             
-            <div className="md:w-3/5 md:pl-8">
-              <div className="flex items-center mb-4">
-                <div className="text-4xl mr-3">{features[currentIndex].icon}</div>
-                <h3 className="text-2xl font-bold text-green-400">{features[currentIndex].title}</h3>
+            {/* Responsive: Text content padding and text sizes adjusted */}
+            <div className="w-full md:w-3/5 md:pl-6 text-center md:text-left"> {/* Added text-center for mobile */}
+              <div className="flex items-center justify-center md:justify-start mb-2 sm:mb-4">
+                {/* Responsive: Emoji icon size */}
+                <div className="text-3xl sm:text-4xl mr-2 sm:mr-3">{features[currentIndex].icon}</div>
+                {/* Responsive: Title font size */}
+                <h3 className="text-xl sm:text-2xl font-bold text-green-400">{features[currentIndex].title}</h3>
               </div>
-              <p className="text-lg mb-4">
+              {/* Responsive: Description font size and margin */}
+              <p className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
                 {features[currentIndex].description}
               </p>
             </div>
@@ -97,17 +105,20 @@ const FeatureCarousel = () => {
         </div>
       </div>
       
-      <div className="flex justify-between px-4 pb-4">
+      {/* Responsive: Navigation controls padding adjusted */}
+      <div className="flex justify-between px-3 sm:px-4 pb-3 sm:pb-4">
+        {/* Responsive: Button padding and SVG size */}
         <button 
-          className="bg-gray-700 hover:bg-gray-600 text-white rounded-full p-2 focus:outline-none"
+          className="bg-gray-700 hover:bg-gray-600 text-white rounded-full p-1.5 sm:p-2 focus:outline-none"
           onClick={prevFeature}
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         
-        <div className="flex space-x-2">
+        {/* Responsive: Dots container spacing */}
+        <div className="flex items-center space-x-1.5 sm:space-x-2">
           {features.map((_, index) => (
             <button
               key={index}
