@@ -23,10 +23,10 @@ const WhyDifferent = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
       </svg>
     ),
+    // Changed from WrenchScrewdriverIcon to LifebuoyIcon for "Suporte Técnico e Estratégico" for better "support" metaphor
     suporteTecnico: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.83-5.83M11.42 15.17A3 3 0 0 1 6.344 12.16l-4.128-1.252A.972.972 0 0 1 2.992 9.408l1.252-4.128A3 3 0 0 1 6.344 2.82l7.119 7.119a3 3 0 0 1 2.526 5.03l.043.043L11.42 15.17Z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="m11.42 15.17-.379-.379a2.625 2.625 0 0 1 0-3.712l2.69-2.69a2.625 2.625 0 0 1 0-3.712l.379-.379M11.42 15.17l2.69 2.69" />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 stroke-[1.5]">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.95-1.488A3.752 3.752 0 0 0 18 15.375V12.75A3.75 3.75 0 0 0 14.25 9h-4.5A3.75 3.75 0 0 0 6 12.75v2.625c0 .507.161.988.45 1.387A8.949 8.949 0 0 0 12 21Zm-4.5-6.75A.75.75 0 0 1 6.75 13.5h10.5a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V14.25Z" />
       </svg>
     ),
     atualizacoesConstantes: (
