@@ -47,28 +47,32 @@ const FAQ = () => {
     <section id="faq" className="py-16 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          {/* Responsive: Adjusted headline font sizes and margin */}
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Perguntas <span className="text-green-500">Frequentes</span>
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-lg sm:text-xl text-gray-300">
               Tudo o que você precisa saber antes de investir
             </p>
           </div>
           
-          <div className="space-y-4 mb-12">
+          {/* Responsive: FAQ items container margin */}
+          <div className="space-y-3 sm:space-y-4 mb-10 sm:mb-12">
             {faqItems.map((faq, index) => (
               <div 
                 key={index} 
                 className={`bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 ${openIndex === index ? 'shadow-lg' : ''}`}
               >
+                {/* Responsive: FAQ item button padding and text size */}
                 <button
-                  className="w-full text-left p-6 flex justify-between items-center focus:outline-none"
+                  className="w-full text-left p-4 sm:p-5 md:p-6 flex justify-between items-center focus:outline-none"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="text-xl font-medium">{faq.question}</span>
+                  <span className="text-base sm:text-lg md:text-xl font-medium flex-1 pr-2">{faq.question}</span> {/* flex-1 pr-2 to allow text to wrap and not overlap icon */}
+                  {/* Responsive: SVG icon size */}
                   <svg 
-                    className={`w-5 h-5 transform transition-transform ${openIndex === index ? 'rotate-180' : ''}`} 
+                    className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''}`} 
                     fill="none" 
                     strokeLinecap="round" 
                     strokeLinejoin="round" 
@@ -79,12 +83,13 @@ const FAQ = () => {
                     <path d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
+                {/* Responsive: FAQ answer padding and text size */}
                 <div 
                   className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === index ? 'max-h-96 pb-6 px-6' : 'max-h-0'
+                    openIndex === index ? 'max-h-screen pb-4 px-4 sm:pb-5 sm:px-5 md:pb-6 md:px-6' : 'max-h-0' // max-h-screen for smooth opening
                   }`}
                 >
-                  <p className="text-gray-300">
+                  <p className="text-sm sm:text-base text-gray-300">
                     {faq.answer}
                   </p>
                 </div>
@@ -92,16 +97,18 @@ const FAQ = () => {
             ))}
           </div>
           
-          <div className="bg-black p-6 rounded-lg text-center">
-            <h3 className="text-2xl font-semibold mb-4">
+          {/* Responsive: "Ainda tem dúvidas?" box padding, margins, and text sizes */}
+          <div className="bg-black p-4 sm:p-6 rounded-lg text-center">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
               Ainda tem dúvidas?
             </h3>
-            <p className="text-lg mb-6">
+            <p className="text-base sm:text-lg mb-4 sm:mb-6">
               Entre em contato com nossa equipe de suporte e teremos prazer em ajudar
             </p>
+            {/* Responsive: Button padding and text size adjusted */}
             <a 
               href="mailto:suporte@lucroautomatico.com.br" 
-              className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors"
+              className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold text-base sm:text-lg py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-colors"
             >
               FALAR COM O SUPORTE
             </a>
