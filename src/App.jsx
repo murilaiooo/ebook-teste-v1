@@ -17,16 +17,32 @@ import Footer from './components/Footer';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  // Throttled scroll handler to improve performance
+  function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    }
+  }
   
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
+
+    const throttledScrollHandler = throttle(handleScroll, 150);
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', throttledScrollHandler);
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledScrollHandler);
     };
   }, []);
 

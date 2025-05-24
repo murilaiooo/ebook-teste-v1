@@ -11,7 +11,7 @@ const CountdownTimer = () => {
     }, 1000);
     
     return () => clearTimeout(timer);
-  });
+  }, []); // Runs only on mount and unmount to prevent multiple timers
   
   const timerComponents = [
     {
