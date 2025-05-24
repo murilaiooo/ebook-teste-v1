@@ -64,39 +64,46 @@ const TestimonialCarousel = () => {
 
   return (
     <div className="relative">
-      <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-        <div className="mb-8 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/3 mb-6 md:mb-0">
-            <div className="relative">
-              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto border-4 border-green-500">
+      {/* Responsive: Main card padding adjusted */}
+      <div className="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-lg">
+        {/* Responsive: Layout explicitly defined for mobile (flex-col) and md+ (flex-row) */}
+        <div className="mb-6 sm:mb-8 flex flex-col md:flex-row items-center text-center md:text-left">
+          {/* Responsive: Image container margin adjusted */}
+          <div className="md:w-1/3 mb-4 sm:mb-6 md:mb-0">
+            <div className="relative inline-block"> {/* inline-block to contain badge correctly */}
+              {/* Responsive: Image size adjusted for smaller screens */}
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto border-4 border-green-500">
                 <img 
                   src={currentTestimonial.image}
                   alt={`Foto de ${currentTestimonial.name}`}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 right-0 bg-green-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+              {/* Responsive: Badge text size and padding adjusted */}
+              <div className="absolute bottom-0 right-0 bg-green-500 text-black px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-bold">
                 {currentTestimonial.earnings}
               </div>
             </div>
           </div>
           
-          <div className="md:w-2/3 md:pl-8">
-            <div className="mb-4">
-              <p className="text-lg mb-6 italic">
+          {/* Responsive: Text content padding and text sizes adjusted */}
+          <div className="md:w-2/3 md:pl-6"> {/* Reduced padding on md for slightly tighter layout if needed */}
+            <div className="mb-3 sm:mb-4">
+              <p className="text-base sm:text-lg mb-3 sm:mb-4 italic"> {/* Quote text size and margin */}
                 "{currentTestimonial.text}"
               </p>
-              <div className="mb-1 font-semibold text-lg">{currentTestimonial.name}</div>
-              <div className="mb-1 text-sm text-gray-400">{currentTestimonial.location}</div>
-              <div className="mb-2 text-sm text-gray-400">{currentTestimonial.occupation}</div>
-              <div className="text-green-500 font-medium text-sm">
+              <div className="mb-1 font-semibold text-base sm:text-lg">{currentTestimonial.name}</div>
+              <div className="mb-1 text-xs sm:text-sm text-gray-400">{currentTestimonial.location}</div>
+              <div className="mb-2 text-xs sm:text-sm text-gray-400">{currentTestimonial.occupation}</div>
+              <div className="text-green-500 font-medium text-xs sm:text-sm">
                 Fonte de Renda: {currentTestimonial.source}
               </div>
             </div>
           </div>
         </div>
         
-        <div className="flex justify-center space-x-3">
+        {/* Responsive: Dots spacing */}
+        <div className="flex justify-center space-x-2 sm:space-x-3">
           {testimonials.map((_, index) => (
             <button
               key={index}
